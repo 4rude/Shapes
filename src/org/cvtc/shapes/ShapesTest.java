@@ -18,7 +18,7 @@ public class ShapesTest {
 	public static void main(String[] args) {
 		
 		// Creating a Cuboid object
-		Cuboid cuboidTestObject = new Cuboid(2, 4, 6);
+		Cuboid cuboidTestObject = new Cuboid(3, 3, 3);
 		
 		// Creating a Cylinder object
 		Cylinder cylinderTestObject = new Cylinder(8, 2);

@@ -11,6 +11,9 @@ import javax.swing.JOptionPane;
  */
 public class Cylinder extends Shape {
 
+	// Boolean used to determine if there is an error in the user input
+		public boolean inputError = false;
+		
 	// Height Property 
 	private float height = 0;
 	
@@ -27,6 +30,7 @@ public class Cylinder extends Shape {
 		if (height <= 0) {
 			// Setting width to 1 because the user entered a 0 or less
 			this.height = 1;
+			inputError = true;
 			
 			// Error message which outputs if the user entered invalid data
 			System.out.println("The height must be greater than zero for it to be physically possible. A #1 will replace what was inputted.");
@@ -35,6 +39,7 @@ public class Cylinder extends Shape {
 		if (radius <= 0) {
 			// Setting width to 1 because the user entered a 0 or less
 			this.radius = 1;
+			inputError = true;
 			
 			// Error message which outputs if the user entered invalid data
 			System.out.println("The radius must be greater than zero for it to be physically possible. A #1 will replace what was inputted.");

@@ -11,6 +11,9 @@ import javax.swing.JOptionPane;
  */
 public class Cuboid extends Shape {
 	
+	// Boolean used to determine if there is an error in the user input
+	public boolean inputError = false;
+	
 	// Height Property
 	private float height = 0;
 	
@@ -30,6 +33,7 @@ public class Cuboid extends Shape {
 		if (height <= 0) {
 			// Setting width to 1 because the user entered a 0 or less
 			this.height = 1;
+			inputError = true;
 			
 			// Error message which outputs if the user entered invalid data
 			System.out.println("The height must be greater than zero for it to be physically possible. A #1 will replace what was inputted.");
@@ -38,6 +42,7 @@ public class Cuboid extends Shape {
 		if (depth <= 0) {
 			// Setting width to 1 because the user entered a 0 or less
 			this.height = 1;
+			inputError = true;
 			
 			// Error message which outputs if the user entered invalid data
 			System.out.println("The depth must be greater than zero for it to be physically possible. A #1 will replace what was inputted.");
@@ -46,6 +51,7 @@ public class Cuboid extends Shape {
 		if (width <= 0) {
 			// Setting width to 1 because the user entered a 0 or less
 			this.width = 1;
+			inputError = true;
 			
 			// Error message which outputs if the user entered invalid data
 			System.out.println("The width must be greater than zero for it to be physically possible. A #1 will replace what was inputted.");
@@ -82,7 +88,6 @@ public class Cuboid extends Shape {
 	}
 
 	
-	
 	/* 
 	 * This class creates and returns the surface area of a Cuboid.
 	 */
@@ -90,7 +95,7 @@ public class Cuboid extends Shape {
 	@Override
 	public float surfaceArea() {
 		// TODO Auto-generated method stub
-		float surfaceArea = ((2 * getWidth()) + (2 * getHeight()) + (2 * getDepth()));
+		float surfaceArea = ((2 * this.depth * this.width) + (2 * this.depth * this.height) + (2 * this.height * this.width));
 		return surfaceArea;
 	}
 

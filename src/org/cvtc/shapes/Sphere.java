@@ -11,6 +11,9 @@ import javax.swing.JOptionPane;
  */
 public class Sphere extends Shape {
 
+	// Boolean used to determine if there is an error in the user input
+		public boolean inputError = false;
+		
 	// Property of Sphere
 	private float radius = 0;
 	
@@ -21,6 +24,8 @@ public class Sphere extends Shape {
 		// Error message which outputs if the user entered invalid data
 		if (radius <= 0) {
 			this.radius = 1;
+			inputError = true;
+			
 			System.out.println("The radius must be greater than zero for it to be physically possible. A #1 will replace what was inputted.");
 		}
 	}
