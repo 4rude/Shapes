@@ -5,6 +5,7 @@ package org.cvtc.shapes;
 
 import javax.swing.JOptionPane;
 
+
 /**
  * @author matt
  *
@@ -25,7 +26,8 @@ public class Cuboid extends Shape {
 	
 	
 	// Cuboid Constructor
-	public Cuboid(float width, float height, float depth) {
+	public Cuboid(Dialog messageBox, float width, float height, float depth) {
+		super(messageBox);
 		this.width = width;
 		this.height = height;
 		this.depth = depth;
@@ -113,7 +115,6 @@ public class Cuboid extends Shape {
 	 * This class returns the height, width, depth, surface area, and the volume of a cuboid.
 	 */
 	
-	@Override
 	public void render() {
 		final String MESSAGE = "Height: " + getHeight() + " Width: " + getWidth() + " Depth: " 
 								+ getDepth() + " Surface Area: " + surfaceArea() + " Volume: " + volume();

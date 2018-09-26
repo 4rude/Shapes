@@ -22,7 +22,8 @@ public class Cylinder extends Shape {
 		
 		
 	// Cylinder Constructor
-	public Cylinder(float height, float radius) {
+	public Cylinder(Dialog messageBox, float height, float radius) {
+		super(messageBox);
 		this.height = height;
 		this.radius = radius;
 		
@@ -86,7 +87,7 @@ public class Cylinder extends Shape {
 
 	/* This class creates and returns the height, radius, surface area, and volume of a Cylinder.
 	 */
-	@Override
+	
 	public void render() {
 		final String MESSAGE = "Height: " + getHeight() + " Radius: " + getRadius() + " Surface Area: " + surfaceArea() + " Volume: " + volume();
 		JOptionPane.showMessageDialog(null, MESSAGE);

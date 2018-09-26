@@ -13,14 +13,31 @@ package org.cvtc.shapes;
 
 public abstract class Shape {
 	
+	// Shape property
+	private Dialog messageBox;
+	
+	// Constructor
+	public Shape(Dialog messageBox) {
+		this.messageBox = messageBox;
+	}
+	
+	
+	public Dialog getMessageBox() {
+		return messageBox;
+	}
+
+
+	public void setMessageBox(Dialog messageBox) {
+		this.messageBox = messageBox;
+	}
+
+
 	// Property of a shape
 	public abstract float surfaceArea();
 	
 	// Property of a shape
 	public abstract float volume();
 	
-	// Function used for data output
-	public abstract void render();
 	
 	
 }

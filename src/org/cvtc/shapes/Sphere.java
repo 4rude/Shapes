@@ -18,7 +18,8 @@ public class Sphere extends Shape {
 	private float radius = 0;
 	
 	// Sphere Constructor
-	public Sphere(float radius) {
+	public Sphere(Dialog messageBox, float radius) {
+		super(messageBox);
 		this.radius = radius;
 		
 		// Error message which outputs if the user entered invalid data
@@ -65,7 +66,7 @@ public class Sphere extends Shape {
 	/* 
 	 * This class displays the radius, surface area, and volume of a Sphere.
 	 */
-	@Override
+	
 	public void render() {
 		final String MESSAGE = "Radius: " + getRadius() + " Surface Area: " + surfaceArea() + " Volume: " + volume();
 		JOptionPane.showMessageDialog(null, MESSAGE);
