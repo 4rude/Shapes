@@ -17,18 +17,31 @@ public class ShapesTest {
 	 */
 	public static void main(String[] args) {
 		
-		// 
-		MessageBox m = new MessageBox();
+		// Create a new shapeFactory object
+		ShapeFactory shapeFactory = new ShapeFactory();
+		
+		// Create the Cuboid test object
+		Cuboid cuboidTestObject = (Cuboid) shapeFactory.make(ShapeType.Cuboid);
 		
 		// Creating a Cuboid object
-		Cuboid cuboidTestObject = new Cuboid(m, 3, 3, 3);
+		cuboidTestObject.setWidth(1);
+		cuboidTestObject.setHeight(5);
+		cuboidTestObject.setDepth(10);
 		
-		// Creating a Cylinder object
-		Cylinder cylinderTestObject = new Cylinder(m, 8, 2);
+		// Creating a Cylinder test object
+		Cylinder cylinderTestObject = (Cylinder) shapeFactory.make(ShapeType.Cylinder);
 		
-		// Creating a Sphere object
-		Sphere sphereTestObject = new Sphere(m, 0);
+		// Assign the properties
+		cylinderTestObject.setHeight(10);
+		cylinderTestObject.setRadius(4);
 		
+		
+		// Creating a Sphere test object
+		Sphere sphereTestObject = (Sphere) shapeFactory.make(ShapeType.Sphere);
+		
+		// Assign the properties
+		sphereTestObject.setRadius(0);
+	
 		
 		// Testing all the shapes properties and functions of a Cuboid object
 		cuboidTestObject.render();

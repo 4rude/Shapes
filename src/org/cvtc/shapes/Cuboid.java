@@ -26,11 +26,12 @@ public class Cuboid extends Shape {
 	
 	
 	// Cuboid Constructor
-	public Cuboid(Dialog messageBox, float width, float height, float depth) {
+	public Cuboid(Dialog messageBox) {
+		// , float width, float height, float depth
 		super(messageBox);
-		this.width = width;
-		this.height = height;
-		this.depth = depth;
+//		this.width = width;
+//		this.height = height;
+//		this.depth = depth;
 		
 		if (height <= 0) {
 			// Setting width to 1 because the user entered a 0 or less
@@ -60,6 +61,7 @@ public class Cuboid extends Shape {
 		}
 	}
 	
+
 	// Getter for width
 	public float getWidth() {
 		return width;

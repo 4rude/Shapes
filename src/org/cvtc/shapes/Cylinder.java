@@ -22,10 +22,11 @@ public class Cylinder extends Shape {
 		
 		
 	// Cylinder Constructor
-	public Cylinder(Dialog messageBox, float height, float radius) {
+	public Cylinder(Dialog messageBox) {
+		// , float height, float radius
 		super(messageBox);
-		this.height = height;
-		this.radius = radius;
+		// this.height = height;
+		// this.radius = radius;
 		
 		
 		if (height <= 0) {

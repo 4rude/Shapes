@@ -18,9 +18,10 @@ public class Sphere extends Shape {
 	private float radius = 0;
 	
 	// Sphere Constructor
-	public Sphere(Dialog messageBox, float radius) {
+	public Sphere(Dialog messageBox) {
+		// , float radius
 		super(messageBox);
-		this.radius = radius;
+		// this.radius = radius;
 		
 		// Error message which outputs if the user entered invalid data
 		if (radius <= 0) {
